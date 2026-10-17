@@ -1,0 +1,233 @@
+:root{
+    /*Colores primarios*/
+    --color-purple: hsl(246, 80%, 60%);
+    --color-orange: hsl(15, 100%, 70%);
+    --color-blue: hsl(195, 74%, 62%);
+    --color-pink: hsl(348, 100%, 68%);
+    --color-green: hsl(145, 58%, 55%);
+    --color-purple700: hsl(264, 64%, 52%);
+    --color-yellow: hsl(43, 84%, 65%);
+
+    /*Colores neutrales*/
+    --color-navy950: hsl(226, 43%, 10%);
+    --color-navy900: hsl(235, 46%, 20%);
+    --color-purple500: hsl(235, 45%, 61%);
+    --color-navy200: hsl(236, 100%, 87%);
+
+    /*Weights*/
+    --weigth300: 300;
+    --weigth400: 400;
+    --weigth500: 500;
+}
+body{
+    margin: 0;
+    background-color: var(--color-navy950);
+    color: white;
+    font-size: 1.125rem;
+    font-family: "Rubik", sans-serif;
+}
+.container-main{
+    margin: 5rem 1.5rem;
+}
+
+.card-perfil{
+    
+    background-color: var(--color-navy900);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: var(--weigth300);
+    
+}
+span{
+    display: block;
+    font-size: 0.875rem;
+    font-weight: var(--weigth300);
+    color: var(--color-navy200);
+}
+.perfil{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-purple);
+    border-radius: 10px;
+    padding: 2rem 1.8rem;
+}
+.imagen-jeremy{
+    width: 4.375rem;
+    height: 4.375rem;
+    margin-right: 1.125rem;
+    border: 0.2rem solid white;
+    border-radius: 50%;
+}
+.botones{
+    display: flex;
+    padding: 1.5rem 2rem;
+    font-size: 1.125rem;
+    justify-content: space-between;
+}
+button{
+    background-color: var(--color-navy900);
+    border: none;
+    color: var(--color-navy200);
+    cursor: pointer;
+}
+.botones button:hover{
+    color: white;
+}
+.botones button:focus-visible{
+    color: white;
+}
+.botones button.seleccionado{
+    color: white;
+}
+
+.seccion-card{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.tarjeta-actividad{
+    display: grid;
+    align-items: center;
+    grid-template-areas: "titulo img-opciones"
+                          "horas-actuales horas-previas";
+    background-color: var(--color-navy900);
+    line-height: 1;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+.tarjeta-actividad:hover{
+    background-color: #33397a;
+}
+.clase-comun{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-top: 2.5rem;
+}
+.imagen-actividad{
+    position: absolute;
+    top: -0.725rem;
+    right: 1rem;
+    z-index: 0;
+}
+
+.titulo{
+    font-size: 1.125rem;
+    font-weight: var(--weigth500);
+    grid-area: titulo;
+}
+.img-opciones{
+    grid-area: img-opciones;
+    justify-self: end;
+}
+.horas-actuales{
+    font-size: 1.875rem;
+    font-weight: var(--weigth300);
+    grid-area: horas-actuales;
+    margin-top: 0;
+}
+.horas-previas{
+    font-size: 0.875rem;
+    font-weight: var(--weigth400);
+    grid-area: horas-previas;
+    justify-self: end;
+    color: var(--color-navy200);
+}
+.work{
+    background-color: var(--color-orange);
+}
+.play{
+    background-color: var(--color-blue);
+}
+.study{
+    background-color: var(--color-pink);
+}
+.exercise{
+    background-color: var(--color-green);
+}
+.social{
+    background-color: var(--color-purple700);
+}
+.self-care{
+    background-color: var(--color-yellow);
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px){
+    .container-main{
+        display: grid;
+        max-width: 69.375rem;
+        width: calc(100% - 3rem);
+        margin-inline: auto;
+        grid-template-areas: "card-perfil seccion-card";
+        grid-template-columns: 1fr 3fr;
+        gap: 1rem;
+    }
+    .botones{
+        justify-self: start;
+    }
+    .card-perfil{
+        grid-area: card-perfil;
+        margin: 0;
+    }
+    .seccion-card{
+        grid-template-areas: "work play study"
+                              "exercise social self-care";
+        
+        gap: 1rem;
+    }
+    .tarjeta-actividad{
+        grid-template-areas: "titulo img-opciones"
+                              "horas-actuales horas-actuales"
+                              "horas-previas horas-previas";
+    }
+    .titulo{
+        grid-area: titulo;
+    }
+    .img-opciones{
+        grid-area: img-opciones;
+    }
+    .horas-actuales{
+        grid-area: horas-actuales;
+    }
+    .horas-previas{
+        grid-area: horas-previas;
+        justify-self: start;
+    }
+    .perfil{
+        flex-direction: column;
+    }
+    .botones{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .work{
+        grid-area: work;
+    }
+    .play{
+        grid-area: play;
+    }
+    .study{
+        grid-area: study;
+    }
+    .exercise{
+        grid-area: exercise;
+    }
+    .social{
+        grid-area: social;
+    }
+    .self-care{
+        grid-area: self-care;
+    }
+    
+}
