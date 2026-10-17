@@ -26,12 +26,12 @@ Los usuarios deben poder:
 
 ### Captura de pantalla
 
-![](./screenshot.png)
+![](./Screenshot.png)
 
 ### Enlaces
 
 - URL de la solución: [Añadir URL de la solución aquí](https://github.com/YeiYei98/time-dashboard-main.git)
-- URL del sitio en vivo: [Añadir URL del sitio en vivo aquí](https://your-live-site-url.com)
+- URL del sitio en vivo: [Añadir URL del sitio en vivo aquí](https://yeiyei98.github.io/time-dashboard-main/)
 
 ## Mi proceso
 
